@@ -1,2 +1,8 @@
 https://portal.qa-community.co.uk/~/aws-specialist/learning/kubernetes/kubernetes--labels-and-selectors
 
+To search by label:
+kubectl get pod -l app=nginx-1 <-- searches for the label called app where the value is nginx-1 and displays the resulting pods
+
+To delete by file:
+kubectl delete -f pods.yaml <-- this will delete everything that's created by the pods.yaml file
+

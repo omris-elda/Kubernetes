@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp3
+spec:
+  selector:
+    matchLabels:
+      app: myapp3
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: myapp3
+    spec:
+      containers:
+      - name: myapp3
+        image: omriselda/app3
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5002
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp3
+spec:
+  selector:
+    app: myapp3
+  ports:
+  - port: 5002
+    targetPort: 5002
+    protocol: TCP
+  type: LoadBalancer
+
