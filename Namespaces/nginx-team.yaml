@@ -1,5 +1,6 @@
 # https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 # For information on what everything does in here
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
