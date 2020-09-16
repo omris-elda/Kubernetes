@@ -1,0 +1,2 @@
+https://portal.qa-community.co.uk/~/aws-specialist/learning/kubernetes/kubernetes--labels-and-selectors
+

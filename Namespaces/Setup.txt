@@ -1,3 +1,5 @@
+https://portal.qa-community.co.uk/~/aws-specialist/learning/kubernetes/kubernetes--namespaces
+
 To create the namespaces manually:
 
 kubectl create namespaces apache-team
@@ -8,7 +10,16 @@ To create the namespaces using yaml files:
 kubectl apply -f apache-team-namespace.yaml
 kubectl apply -f nginx-team-namespace.yaml
 
+kubectl get namespaces <--will show you the created namespaces
+
 To create the deployments:
 
 kubectl apply -f apache-team.yaml
 kubectl apply -f nginx-team.yaml
+
+kubectl get deployments --namespace apache-team <-- get all deployments within the apache team namespace
+kubectl get deployments --namespace nginx-team <-- get all deployments within the nginx team namespace
+
+To delete namespaces (and any deployments within them)
+
+kubectl delete ns nginx-team apache-team
