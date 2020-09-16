@@ -1,0 +1,18 @@
+Install kubectl:
+
+Do your sudo apt-get update -y etc first
+
+# download
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+# make executable
+chmod +x kubectl
+# install binary in to your PATH
+sudo mv ./kubectl /usr/local/bin/kubectl 
+
+Using Google:
+
+First you need to authenticate with your cluster
+# gcloud container clusters get-credentials [CLUSTER_NAME]
+gcloud container clusters get-credenetials default
+
+You should log in with the main account here

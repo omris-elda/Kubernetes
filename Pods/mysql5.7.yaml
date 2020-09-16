@@ -18,7 +18,7 @@ spec:
     #     memory: "128Mi"
     #     cpu: "500m"
     ports:
-      - containerPort: 3306
+    - containerPort: 3306
     env:
     - name: MYSQ_ROOT_PASSWORD
       value: password
