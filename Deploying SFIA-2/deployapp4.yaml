@@ -33,5 +33,6 @@ spec:
   - port: 5003
     targetPort: 5003
     protocol: TCP
-  type: LoadBalancer
+  type: ClusterIP
+
 
