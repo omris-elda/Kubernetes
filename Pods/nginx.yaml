@@ -1,0 +1,26 @@
+# https://portal.qa-community.co.uk/~/aws-specialist/learning/kubernetes/kubernetes--pods
+apiVersion: v1
+# Sets the version of the Kubernetes API that we want to talk to
+# Useful for future programmers so they know what version of the syntax we're using
+
+kind: Pod
+# Tells Kubernetes what type of object we're trying to deploy, a pod in this case
+
+metadata:
+  name: nginx
+# Gives the pod a name
+  labels:
+    app: nginx
+spec:
+# Here we define the specifications of the pod
+  containers:
+  - name: nginx
+    image: nginx:alpine
+    ports:
+    - containerPort: 80
+
+# Our first (and in this case only) container is Nginx
+
+# To run the pod, use:
+# kubectl apply -f nginx.yaml
+# and then kubectl get pods to see the list of deployed pods
