@@ -1,0 +1,26 @@
+# Create a Pod template for the mysql:5.7 image.
+# You will need to set the MYSQ_ROOT_PASSWORD and MYSQL_DATABASE environment variables for the Pod to succeed.
+# Log in to the Pod using exec.
+# Try to open and login to the mysql client using mysql -p.
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql5.7
+  labels:
+    name: myapp
+spec:
+  containers:
+  - name: mysql5.7
+    image: mysql:5.7
+    # resources:
+    #   limits:
+    #     memory: "128Mi"
+    #     cpu: "500m"
+    ports:
+      - containerPort: 3306
+    env:
+    - name: MYSQ_ROOT_PASSWORD
+      value: password
+    - name: MYSQL_DATABASE
+      value: firstdb
