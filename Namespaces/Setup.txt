@@ -1,0 +1,14 @@
+To create the namespaces manually:
+
+kubectl create namespaces apache-team
+kubectl create namespaces nginx-team
+
+To create the namespaces using yaml files:
+
+kubectl apply -f apache-team-namespace.yaml
+kubectl apply -f nginx-team-namespace.yaml
+
+To create the deployments:
+
+kubectl apply -f apache-team.yaml
+kubectl apply -f nginx-team.yaml
