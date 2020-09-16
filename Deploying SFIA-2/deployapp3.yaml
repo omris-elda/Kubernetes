@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp3
+  name: service3
 spec:
   selector:
     matchLabels:
-      app: myapp3
+      app: service3
   replicas: 1
   template:
     metadata:
       labels:
-        app: myapp3
+        app: service3
     spec:
       containers:
-      - name: myapp3
+      - name: service3
         image: omriselda/app3
         resources:
           limits:
@@ -25,10 +25,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp3
+  name: service3
 spec:
   selector:
-    app: myapp3
+    app: service3
   ports:
   - port: 5002
     targetPort: 5002

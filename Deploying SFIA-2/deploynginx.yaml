@@ -1,3 +1,11 @@
+# Begin test
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: 
+
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -15,12 +23,18 @@ spec:
       containers:
       - name: nginx
         image: nginx:alpine
+        volumeMounts:
+        - name: nginx
+          mountPath: /etc/nginx/nginx.conf
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
         - containerPort: 80
+      volumes:
+      - name: nginx
+
 ---
 apiVersion: v1
 kind: Service
