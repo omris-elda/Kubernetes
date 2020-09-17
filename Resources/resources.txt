@@ -1,0 +1,5 @@
+With resources you can define a limit and a requested amount of resources per container.
+For example, a container might have a request of 1 CPU, but have a limit of 2 CPUs.
+This means that it'll have at least 1 CPU, but wont go over 2. This helps us manage our resources more efficiently.
+
+You can also use fractions of a resource, for instance 0.5 of a CPU

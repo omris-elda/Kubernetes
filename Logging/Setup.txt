@@ -1,0 +1,17 @@
+Access the Logs in Kibana
+ Get the IP address for your Kibana service with this command:
+kubectl get service kibana
+ Navigate to the address with the port 5601 in a web browser, for example:
+http://35.189.121.23:5601
+ On the Welcome to Kibana page, select Explore on my own
+ Select Management on the side navigation bar
+ Under Kibana, select Index Patterns
+ In the Index Pattern field enter: logstash*
+ Select Next Step
+ In the drop-down field, select @timestamp
+ Select Create index pattern
+ Navigate to Discover on the side navigation bar to see your logs
+Clean Up
+To remove the resources created in this tutorial, use a delete command with the provided template:
+
+kubectl delete -f elk-sidecar-example.yaml

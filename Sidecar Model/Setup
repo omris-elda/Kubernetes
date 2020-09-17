@@ -12,4 +12,4 @@ Check the NGINX logs:
 kubectl logs pods/jenkins -c jenkins
 
 Delete it all:
-kubectl delete -f pods/jenkins
+kubectl delete -f nginx-jenkins-sidecar.yaml
