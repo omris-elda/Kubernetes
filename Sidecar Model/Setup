@@ -1,0 +1,15 @@
+Apply the sidecar.yaml:
+kubectl apply -f nginx-jenkins-sidecar.yaml
+
+Forward port 80 from the pod so that it can be accessed from the machine:
+kubectl port-forward jenkins 9000:80
+
+Access the application:
+Go to http://[ipaddress of jenkins]:9000/jenkins
+Jenkins should load up
+
+Check the NGINX logs:
+kubectl logs pods/jenkins -c jenkins
+
+Delete it all:
+kubectl delete -f pods/jenkins

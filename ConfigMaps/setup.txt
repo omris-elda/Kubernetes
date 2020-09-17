@@ -20,3 +20,6 @@ kubectl apply -f config-map.yaml
 
 Then you need to reload the nginx pod:
 kubectl exec nginx-[string of numbers] -- /usr/sbin/nginx -s reload
+
+To remove all of the services, pods, and configmaps:
+kubectl delete -f config-map.yaml,deployment.yaml,service.yaml
