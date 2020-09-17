@@ -1,0 +1,22 @@
+Apply the configuration:
+kubectl apply -f configmap.yaml
+
+Apply the deployment file:
+kubectl apply -f deployment.yaml
+
+Start the loadbalancing service:
+kubectl apply -f service.yaml
+
+Get the load balancer service IP address:
+kubectl get services
+
+Check that the NGINX configuration has applied:
+curl [services IP address here]
+
+This should return 'Hello from Kubernetes!' instead of the default Nginx welcome page
+
+If you update the config file, you need to apply the changes:
+kubectl apply -f config-map.yaml
+
+Then you need to reload the nginx pod:
+kubectl exec nginx-[string of numbers] -- /usr/sbin/nginx -s reload
