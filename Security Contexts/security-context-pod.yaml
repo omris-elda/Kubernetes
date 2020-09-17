@@ -9,7 +9,7 @@ spec:
     fsGroup: 2000
   volumes:
   - name: security-context-vol
-  emptyDir: {}
+    emptyDir: {}
   containers:
   - name: security-context-demo
     image: busybox
