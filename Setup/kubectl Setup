@@ -13,6 +13,6 @@ Using Google:
 
 First you need to authenticate with your cluster
 # gcloud container clusters get-credentials [CLUSTER_NAME]
-gcloud container clusters get-credenetials default
+gcloud container clusters get-credentials default --zone europe-west2-c
 
 You should log in with the main account here

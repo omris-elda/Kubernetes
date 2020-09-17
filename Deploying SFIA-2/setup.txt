@@ -1,0 +1,6 @@
+To deploy:
+
+kubectl apply -f deployapp1.yaml
+kubectl apply -f deployapp2.yaml
+kubectl apply -f deployapp3.yaml
+kubectl apply -f deployapp4.yaml
